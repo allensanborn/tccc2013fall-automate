@@ -144,16 +144,12 @@
             <section>
                 <ul>
                     <li>Treat servers like cattle, not pets</li>
-                    <li>http://blogs.msdn.com/b/kenkilty/archive/2013/01/30/hyperv-for-developers-part-1.aspx</li>
-                    <li>Tyler Durden: Listen up, maggots. You are not special. You are not a beautiful or unique snowflake. You're the same decaying organic matter as everything else.
-                    </li>
-
+                    <li>Tyler Durden: Listen up, maggots. You are not special. You are not a beautiful or unique snowflake. You're the same decaying organic matter as everything else.</li>
                 </ul>
             </section>
             <section>
                 From Chocolatey to working VM in 5 steps
                 <pre>
-
 <code data-trim contenteditable>
 cinst virtualbox
 cinst vagrant
@@ -164,6 +160,7 @@ vagrant up
                     </pre>
             </section>
             <section>
+
                 <ol>
                     <li>VirtualBox</li>
                     <li>Vagrant</li>
@@ -171,6 +168,18 @@ vagrant up
                     <li>VeeWee for Windows (windows-fromscratch)</li>
                 </ol>
                 https://github.com/hh/windows-fromscratch
+            </section>
+            <section>
+                <h2>Hyper-V comes with Windows 8 Pro!!</h2>
+                <ul>
+                    <li><a href="http://blogs.msdn.com/b/kenkilty/archive/2013/01/30/hyperv-for-developers-part-1.aspx">Hyper-V for Developers</a> is a great resource for getting started.</li>
+                    <li>
+                        <p>
+                            Use <a href="http://gallery.technet.microsoft.com/scriptcenter/Convert-WindowsImageps1-0fe23a8f">Convert-WindowsImage.ps1</a>
+                            to convert an Windows OS ISO to a bootable VHD
+                        </p>
+                    </li>
+                </ul>
             </section>
             <!-- Web Platform Installer -->
             <section>
@@ -287,7 +296,12 @@ MVC3                 ASP.NET MVC 3 (Visual Studio 2010)
 </code>
 </pre>
                 </section>
+                <section>
+                    <h2>Create an offline cache for installations with no internet connection</h2>
+                    <p>Ex: >WebPICMD.exe /Offline /Products:WebMatrix,SQLExpress /Path:c:\OfflineCache</p>
+                </section>
             </section>
+
             <!-- Stop DevOPSy stuff-->
             <!--            <section>
                 <h2>Trunk Based Development</h2>
@@ -297,12 +311,41 @@ MVC3                 ASP.NET MVC 3 (Visual Studio 2010)
                     GOOD DIAGRAMS http://www.microsoft.com/visualstudio/inrelease/release-management/about-devops/
             </section>-->
             <!-- NFeature-->
-
             <section>
-                how many ways to install IIS?
-                    clist -source windowsfeatures
-                    cinst IIS-WebServerRole -source windowsfeatures
+                <section>
+                    <h1>NuGet is AWESOME!!!</h1>
+                    <p>Think of it as a generalized tool for managing dependencies.</p>
+                </section>
+                <section>
+                    <h2>Main use cases</h2>
+                    <ul>
+                        <li>NuGet.exe for 3rd party dependencies (dll, js, images)</li>
+                        <li>Chocolatey for applications</li>
+                        <li>BoxStarter for environments</li>
+                        <li>OctopusDeploy for Continuous Integration deployments</li>
+                    </ul>
+                </section>
+                <section>
+                    There are a billion articles on NuGet...
+                </section>
+                <section>
+                    <h2>Chocolatey for exe/msi/zip</h2>
+                    <ul>
+                        <li>Install Visual Studio Ultimate: cinst VisualStudio2012Ultimate</li>
+                    </ul>                    
+                </section>
+                <section>
+                    <h2>Chocolatey for windowsfeatures</h2>
+                    <ul>
+                        <li>List all windows features: clist -source windowsfeatures</li>
+                        <li>Install IIS: cinst IIS-WebServerRole -source windowsfeatures</li>                        
+                    </ul>                    
+                </section>
+                <section>
+
+                </section>
             </section>
+
         </div>
     </div>
 
