@@ -182,7 +182,8 @@ vagrant up
                     <ul>
                         <li>use the command line: "C:\Program Files\Microsoft\Web Platform Installer\WebpiCmd.exe"
                         </li>
-                        <li>http://www.iis.net/learn/install/web-platform-installer/web-platform-installer-v4-command-line-webpicmdexe-rtw-release
+                        <li>
+                            <a href="http://www.iis.net/learn/install/web-platform-installer/web-platform-installer-v4-command-line-webpicmdexe-rtw-release">Web Platform Installer v4 Command Line (WebPICMD.exe) - RTW release</a>
                         </li>
                         <li>feed with dependencies and install directions: https://www.microsoft.com/web/webpi/4.6/webproductlist.xml
                         </li>
@@ -196,7 +197,7 @@ vagrant up
                 </section>
                 <section>
                     <h2>Sample of WebPI running aspnet_regiis</h2>
-                    <h3>This fixes the case where Visual Studio was installed before IIS and your ASP.NET web site won't run... sigh</h3>
+                    <p>This fixes the case where Visual Studio was installed before IIS and your ASP.NET web site won't run... sigh</p>
                     <pre>
 <code data-trim contenteditable>
 <entry>
@@ -258,25 +259,50 @@ The ASP.NET IIS Registration tool (Aspnet_regiis.exe) is used to register ASP.NE
                         </pre>
                 </section>
                 <section>
-                    Examples
-                    
+                    <h2>Examples with CLI</h2>
                 </section>
-
-                <!-- Stop DevOPSy stuff-->
-                <!--            <section>
+                <section>
+                    <h2>Install MVC 3 and WebMatrix</h2>
+                    <p>Ex: >WebPICMD.exe /Install /Products:MVC3,WebMatrix</p>
+                </section>
+                <section>
+                    <h2>List all installed features and components</h2>
+                    <p>
+                        Ex: >WebPICMD.exe /List /ListOption:Installed
+                    </p>
+                    <pre>
+<code data-trim contenteditable>
+--Previously Installed Products
+ID                   Title
+----------------------------------------
+AzureNodeSDK         Windows Azure SDK for Node.js
+DACFX                Microsoft SQL Server 2012 Data-Tier Application Framework (DACFx) (May 2013)
+IISExpress           IIS 7.5 Express
+IISExpress_7_5       IIS 7.5 Express (Sep 2011)
+IISExpress_ByPlatform IIS 8.0 Express (Windows Vista and up) Or IIS 7.5 Express (Windows XP)- August 2012
+iisnode_if_iis7_exists IISNode for IIS (IIS exists)
+iisnodedev32         IISNode for IIS Express
+LightSwitch11_AzurePublish_1_1 LightSwitch Azure Publishing 1.1 add-on for Visual Studio 2012 - June 2012 SP1
+MVC3                 ASP.NET MVC 3 (Visual Studio 2010)
+</code>
+</pre>
+                </section>
+            </section>
+            <!-- Stop DevOPSy stuff-->
+            <!--            <section>
                 <h2>Trunk Based Development</h2>
                 Feature toggles let you deploy incomplete features turned off
                     https://github.com/benaston/NFeature
                     Branch-by-abstraction lets you make architectural changes
                     GOOD DIAGRAMS http://www.microsoft.com/visualstudio/inrelease/release-management/about-devops/
             </section>-->
-                <!-- NFeature-->
+            <!-- NFeature-->
 
-                <section>
-                    how many ways to install IIS?
+            <section>
+                how many ways to install IIS?
                     clist -source windowsfeatures
                     cinst IIS-WebServerRole -source windowsfeatures
-                </section>
+            </section>
         </div>
     </div>
 
